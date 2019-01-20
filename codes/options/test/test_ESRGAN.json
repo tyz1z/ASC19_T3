@@ -7,21 +7,21 @@
 
   , "datasets": {
     "test_1": { // the 1st test dataset
-      "name": "set5"
+      "name": "DIV2K_valid"
       , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5_bicLRx4"
+      , "dataroot_HR": "/opt/asc19/problems/sisrc/sources/DIV2K_valid_HR/DIV2K_valid_HR"
+      , "dataroot_LR": "/opt/asc19/problems/sisrc/sources/DIV2K_valid_LR_bicubic/X4"
     }
-    , "test_2": { // the 2nd test dataset
-      "name": "set14"
-      , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14_bicLRx4"
-    }
+//    , "test_2": { // the 2nd test dataset
+//      "name": "set14"
+//      , "mode": "LRHR"
+//      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14"
+//      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14_bicLRx4"
+//    }
   }
 
   , "path": {
-    "root": "/home/xtwang/Projects/BasicSR"
+    "root": "/opt/asc19/problems/sisrc/sources/BasicSR"
     , "pretrain_model_G": "../experiments/pretrained_models/RRDB_ESRGAN_x4.pth"
   }
 
