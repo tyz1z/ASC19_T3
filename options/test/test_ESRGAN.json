@@ -1,0 +1,40 @@
+{
+  "name": "RRDB_ESRGAN_x4"
+  , "suffix": "_ESRGAN"
+  , "model": "srragan"
+  , "scale": 4
+  , "gpu_ids": [0,1,2,3]
+
+  , "datasets": {
+    "test_1": { // the 1st test dataset
+      "name": "DIV2K_valid"
+      , "mode": "LRHR"
+      , "dataroot_HR": "/opt/asc19/problems/sisrc/sources/DIV2K_valid_HR/DIV2K_valid_HR"
+      , "dataroot_LR": "/opt/asc19/problems/sisrc/sources/DIV2K_valid_LR_bicubic/X4"
+    }
+//    , "test_2": { // the 2nd test dataset
+//      "name": "set14"
+//      , "mode": "LRHR"
+//      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14"
+//      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14_bicLRx4"
+//    }
+  }
+
+  , "path": {
+    "root": "/opt/asc19/problems/sisrc/sources/BasicSR"
+    , "pretrain_model_G": "../experiments/pretrained_models/RRDB_ESRGAN_x4.pth"
+  }
+
+  , "network_G": {
+    "which_model_G": "RRDB_net" // RRDB_net | sr_resnet
+    , "norm_type": null
+    , "mode": "CNA"
+    , "nf": 64
+    , "nb": 23
+    , "in_nc": 3
+    , "out_nc": 3
+
+    , "gc": 32
+    , "group": 2
+  }
+}
